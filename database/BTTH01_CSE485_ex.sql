@@ -20,4 +20,14 @@ WHERE tacgia.ten_tgia = "Nhacvietplus";
 
 
 
+--f. Liệt kê 2 tác giả có số bài viết nhiều nhất
+SELECT tacgia.ma_tgia,tacgia.ten_tgia from baiviet,tacgia
+WHERE tacgia.ma_tgia = baiviet.ma_tgia 
+GROUP BY baiviet.ma_tgia
+ORDER BY COUNT(baiviet.ma_tgia) DESC LIMIT 2;
 
+-- g. Liệt kê các bài viết về các bài hát có tựa bài hát chứa 1 trong các từ “yêu”, “thương”, “anh”,“em”
+
+
+SELECT * from baiviet 
+WHERE ten_bhat LIKE '%yêu%' OR ten_bhat LIKE '%thương%' OR ten_bhat LIKE '%anh%' OR ten_bhat LIKE '%em%';
