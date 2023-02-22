@@ -12,7 +12,7 @@ WHERE tacgia.ten_tgia = "Nhacvietplus";
 
 
 -- c. Liệt kê các thể loại nhạc chưa có bài viết cảm nhận nào
-
+SELECT ten_tloai FROM theloai WHERE ma_tloai Not IN (SELECT ma_tloai FROM baiviet);
 
 
 -- d. Liệt kê các bài viết với các thông tin sau: mã bài viết, tên bài viết, tên bài hát, tên tác giả, tên 
@@ -21,3 +21,17 @@ WHERE tacgia.ten_tgia = "Nhacvietplus";
 
 
 
+
+
+
+
+
+
+--h. Liệt kê các bài viết về các bài hát có tiêu đề bài viết hoặc tựa bài hát chứa 1 trong các từ 
+--“yêu”, “thương”, “anh”, “em”
+SELECT *
+FROM baiviet
+WHERE tieude LIKE '%yêu%'
+	OR tieude LIKE '%anh%'
+    OR tieude LIKE '%em%'
+    OR tieude LIKE '%thương%';
