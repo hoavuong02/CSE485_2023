@@ -12,7 +12,7 @@ WHERE tacgia.ten_tgia = "Nhacvietplus";
 
 
 -- c. Liệt kê các thể loại nhạc chưa có bài viết cảm nhận nào
-
+SELECT ten_tloai FROM theloai WHERE ma_tloai Not IN (SELECT ma_tloai FROM baiviet);
 
 
 -- d. Liệt kê các bài viết với các thông tin sau: mã bài viết, tên bài viết, tên bài hát, tên tác giả, tên 
@@ -41,7 +41,16 @@ ORDER BY COUNT(baiviet.ma_tgia) DESC LIMIT 2;
 SELECT * from baiviet 
 WHERE ten_bhat LIKE '%yêu%' OR ten_bhat LIKE '%thương%' OR ten_bhat LIKE '%anh%' OR ten_bhat LIKE '%em%';
 
-
+--h. Liệt kê các bài viết về các bài hát có tiêu đề bài viết hoặc tựa bài hát chứa 1 trong các từ 
+--“yêu”, “thương”, “anh”, “em”
+SELECT *
+FROM baiviet
+WHERE tieude LIKE '%yêu%'
+	OR tieude LIKE '%anh%'
+    OR tieude LIKE '%em%'
+    OR tieude LIKE '%thương%';
+    
+    
 -- i. Tạo 1 view có tên vw_Music để hiển thị thông tin về Danh sách các bài viết kèm theo Tên 
 -- thể loại và tên tác giả
 CREATE VIEW vw_Music AS
@@ -83,3 +92,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`ma_ngdung`, `ten_dnhap`, `mat_khau`) VALUES
 (1, 'damvuong', '123456'),
 (2, 'nguyenmanhtien', '456789');
+
+
+
+
+
+
