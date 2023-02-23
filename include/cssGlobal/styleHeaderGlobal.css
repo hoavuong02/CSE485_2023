@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary-color : #022642;
+    --cyan-color : cyan;
+    --fontfamily-primary : 'Oswald', sans-serif;
+}
+
 body{
     font-family: 'Numans', sans-serif !important;
 }
@@ -38,6 +45,8 @@ body{
     left: 0;
     background-color: #022642 !important;
     border-radius: unset !important;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.4);
+    z-index: 999;
 }
 .testscrool{
     min-height: 1000px;
@@ -47,6 +56,7 @@ body{
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
     font-size: 18px;
+    display: inline-block;
 }
 .navbar-expand-lg .navbar-nav .nav-link:hover {
     text-shadow: red -2px 0,cyan 2px 0;
@@ -81,9 +91,32 @@ body{
     box-shadow: 0 2px 18px rgba(0, 255, 255, 0.4);
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+
+
+button.navbar-toggler.navbar-toggler_2 {
+    background-color: #fff;
+}
+
+.navbar-toggler:focus{
+    transition: 0.3s;
+    box-shadow: 0px 2px 24px cyan;
+}
+.carousel{
+    margin-top: 112px;
+}
+button.navbar-toggler.navbar-toggler_2.collapsed{
+    box-shadow: unset;
+
+}
+h4.text-center.text-uppercase.fw-bold {
+    color: #fff;
+    font-size: 25px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set height to 100% of viewport height */
+  }
+main{
+    flex: 1; /*Để lúc nào footer cũng nằm phía dưới*/
 }
