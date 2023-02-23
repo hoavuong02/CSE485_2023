@@ -15,7 +15,7 @@
             <div class="container-fluid">
                 <div class="my-logo">
                     <a class="navbar-brand" href="#">
-                        <img src="./images/logoPrimary.png" alt="" class="img-fluid">
+                        <img src="./images/logoPrimary.png" alt="" class="img-fluid-header">
                     </a>
                 </div>
                 <button class="navbar-toggler navbar-toggler_2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
