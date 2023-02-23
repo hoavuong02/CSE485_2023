@@ -1,5 +1,6 @@
 <?php
     include('../auth.php');
+    require '..\include\datas_include\database_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +58,15 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                            <?php
+                                $sql = "SELECT COUNT(user.ma_ngdung) FROM `user` ";
+                                $result = mysqli_query($conn, $sql);        
+                                if(mysqli_num_rows($result) > 0){
+                                    $row = mysqli_fetch_assoc($result);
+                                    echo $row['COUNT(user.ma_ngdung)'];
+                                }
+                            ?>
+                        
                         </h5>
                     </div>
                 </div>
@@ -71,7 +80,14 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            10
+                        <?php
+                                $sql = "SELECT COUNT(theloai.ma_tloai) FROM theloai;";
+                                $result = mysqli_query($conn, $sql);        
+                                if(mysqli_num_rows($result) > 0){
+                                    $row = mysqli_fetch_assoc($result);
+                                    echo $row['COUNT(theloai.ma_tloai)'];
+                                }
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -85,7 +101,14 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            20
+                        <?php
+                                $sql = "SELECT COUNT(tacgia.ma_tgia) FROM tacgia;";
+                                $result = mysqli_query($conn, $sql);        
+                                if(mysqli_num_rows($result) > 0){
+                                    $row = mysqli_fetch_assoc($result);
+                                    echo $row['COUNT(tacgia.ma_tgia)'];
+                                }
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -99,7 +122,14 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                        <?php
+                                $sql = "SELECT COUNT(baiviet.ma_bviet) FROM baiviet; ";
+                                $result = mysqli_query($conn, $sql);        
+                                if(mysqli_num_rows($result) > 0){
+                                    $row = mysqli_fetch_assoc($result);
+                                    echo $row['COUNT(baiviet.ma_bviet)'];
+                                }
+                            ?>
                         </h5>
                     </div>
                 </div>
