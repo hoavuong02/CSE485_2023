@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 bg-white rounded">
             <div class="container-fluid">
                 <div class="my-logo">
@@ -35,7 +35,7 @@
                 </form>
                 </div>
             </div>
-        </nav>
+        </nav> 
 
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -63,7 +63,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
             </div>
-    </header>
+    <!-- </header> -->
     <main class="container-fluid mt-3">
         <h3 class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>
         <div class="row">
