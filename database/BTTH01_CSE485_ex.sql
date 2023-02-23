@@ -79,19 +79,22 @@ CALL sp_DSBaiViet('Nhạc trẻ');
 -- l. Bổ sung thêm bảng Users để lưu thông tin Tài khoản đăng nhập và sử dụng cho chức năng 
 -- Đăng nhập/Quản trị trang web.
 
+
 CREATE TABLE `user` (
   `ma_ngdung` int(10) UNSIGNED NOT NULL,
   `ten_dnhap` varchar(30) NOT NULL,
-  `mat_khau` varchar(20) NOT NULL
+  `mat_khau` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `ngay_dki` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`ma_ngdung`, `ten_dnhap`, `mat_khau`) VALUES
-(1, 'damvuong', '123456'),
-(2, 'nguyenmanhtien', '456789');
+INSERT INTO `user` (`ma_ngdung`, `ten_dnhap`, `mat_khau`, `email`, `ngay_dki`) VALUES
+(1, 'damvuong', '123456', 'damvuong@gmail.com', '2023-02-23 12:52:48'),
+(2, 'nguyenmanhtien', '456789', 'nguyentien@gmail.com', '2023-02-23 12:52:48');
 
 
 
