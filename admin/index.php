@@ -59,11 +59,11 @@
 
                         <h5 class="h1 text-center">
                             <?php
-                                $sql = "SELECT COUNT(user.ma_ngdung) FROM `user` ";
+                                $sql = "SELECT COUNT(user.ten_dnhap) FROM `user` ";
                                 $result = mysqli_query($conn, $sql);        
                                 if(mysqli_num_rows($result) > 0){
                                     $row = mysqli_fetch_assoc($result);
-                                    echo $row['COUNT(user.ma_ngdung)'];
+                                    echo $row['COUNT(user.ten_dnhap)'];
                                 }
                             ?>
                         

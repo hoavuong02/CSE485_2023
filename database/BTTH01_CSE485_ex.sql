@@ -81,7 +81,7 @@ CALL sp_DSBaiViet('Nhạc trẻ');
 
 
 CREATE TABLE `user` (
-  `ma_ngdung` int(10) UNSIGNED NOT NULL,
+
   `ten_dnhap` varchar(30) NOT NULL,
   `mat_khau` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -92,9 +92,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`ma_ngdung`, `ten_dnhap`, `mat_khau`, `email`, `ngay_dki`) VALUES
-(1, 'damvuong', '123456', 'damvuong@gmail.com', '2023-02-23 12:52:48'),
-(2, 'nguyenmanhtien', '456789', 'nguyentien@gmail.com', '2023-02-23 12:52:48');
+INSERT INTO `user` (`ten_dnhap`, `mat_khau`, `email`, `ngay_dki`) VALUES
+('damvuong', '123456', 'damvuong@gmail.com', '2023-02-23 12:52:48'),
+('nguyenmanhtien', '456789', 'nguyentien@gmail.com', '2023-02-23 12:52:48');
 
 
 
