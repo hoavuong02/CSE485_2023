@@ -36,7 +36,7 @@
                 require 'include\datas_include\database_connection.php';
                 if(isset($_GET['submit_search'])){       
                 ?>
-                <h3 text-center text-uppercase fw-bold>Kết quả tìm kiếm:</h3>
+                <h3 style = "font-family : var(--fontfamily-primary) " text-center text-uppercase fw-bold>Kết quả tìm kiếm:</h3>
                 <?php    
                     $infoSearch= $_GET['search'];
                     if(isset($_GET['search'])){
@@ -78,7 +78,7 @@
                 
         </div>    
         <div>
-            <h3 class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>
+            <h3 style = "font-family : var(--fontfamily-primary) " class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>
             <div class="row">
                 <?php
                 require 'include\datas_include\database_connection.php';
