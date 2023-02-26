@@ -1,4 +1,5 @@
 <?php
+    require '../../auth.php';
     require '../../include/headerAdmin_global.php';
 ?>
     <main class="container mt-5 mb-5">

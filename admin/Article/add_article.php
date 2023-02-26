@@ -1,4 +1,5 @@
 <?php
+    require '../../auth.php';
     require '../../include/headerAdmin_global.php';
     require_once '../../include/datas_include/database_connection.php';
 
