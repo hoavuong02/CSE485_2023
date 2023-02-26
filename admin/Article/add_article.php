@@ -46,13 +46,13 @@
 
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" >Tóm tắt</span>
-                        <input type="text" class="form-control" name="tomtat" >
+                        <textarea type="text" class="form-control" name="tomtat" > </textarea>
                         
                     </div>
 
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" >Nội dung</span>
-                        <input type="text" class="form-control" name="noidung" >
+                        <textarea type="text" class="form-control" name="noidung" > </textarea>
                     </div>
 
                     <div class="input-group mt-3 mb-3">

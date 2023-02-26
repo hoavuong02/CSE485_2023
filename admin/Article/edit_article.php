@@ -60,13 +60,13 @@
 
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" >Tóm tắt</span>
-                        <input type="text" class="form-control" name="tomtat" value="<?php echo $row['tomtat'] ?>">
+                        <textarea type="text" class="form-control" name="tomtat" > <?php echo $row['tomtat'] ?></textarea>
                         
                     </div>
 
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" >Nội dung</span>
-                        <input type="text" class="form-control" name="noidung" value="<?php echo $row['noidung'] ?>">
+                        <textarea type="text" class="form-control" name="noidung"> <?php echo $row['noidung'] ?></textarea>
                     </div>
 
                     <div class="input-group mt-3 mb-3">
