@@ -82,7 +82,7 @@ CALL sp_DSBaiViet('Nhạc trẻ');
 
 CREATE TABLE `user` (
 
-  `ten_dnhap` varchar(30) NOT NULL,
+  `ten_dnhap` varchar(30) PRIMARY KEY NOT NULL,
   `mat_khau` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `ngay_dki` datetime NOT NULL DEFAULT current_timestamp()
