@@ -1,6 +1,40 @@
 <?php
     require '../../include/headerAdmin_global.php';
 ?>
+
+
+<?php
+                if(isset($_GET['error'])){
+                ?>
+                    <div class="container mt-3">
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <strong>Error!</strong> <?= $_GET['error'] ?>
+                        </div>
+                    </div>
+<?php  }   ?>
+
+<?php
+                if(isset($_GET['success'])){
+                ?>
+                <div class="container mt-3">
+                   <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong>Success!</strong> <?= $_GET['success'] ?>
+                    </div>
+                </div>
+<?php  }   ?>
+
+<?php ?>
+
+ <script>
+        //  document.querySelector(".alert");
+        setTimeout(function(){
+            document.querySelector(".alert").style.display = "none";
+        },5000)
+ </script>
+<?php ?>
+
 <?php
     require_once '../../include/datas_include/database_connection.php';
 

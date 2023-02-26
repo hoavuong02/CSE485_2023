@@ -30,15 +30,22 @@ if ($found) { //=true tìm thấy sự trùng lặp
     <script>
         
         if (confirm('Để xóa tác giả này bạn phải xóa hết tác giả này trong trang bài viết?') == true) {
-          
-        
-          <?php
-            mysqli_query($conn, $deleteArticle);
-            mysqli_query($conn, $deleteCategorySql);
-            ?>;
-            
+            // sử dụng AJAX để gọi script PHP xóa bài viết
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // chuyển hướng trang sau khi xóa thành công
+                    window.location.href = 'author.php?success=Xóa Thành Công!';
+                   
+                }
+            };
+            xmlhttp.open('GET', 'deleteArticleAndAuthor.php?id=' + <?php echo $getId; ?>, true);
+            xmlhttp.send();
         }
-        window.location.href = 'author.php';
+        else {
+            // chuyển hướng trang về trang danh sách tác giả
+            window.location.href = 'author.php';
+        }
     </script>
 
 <?php
@@ -46,6 +53,7 @@ if ($found) { //=true tìm thấy sự trùng lặp
 
 } else {
     mysqli_query($conn, $deleteCategorySql);
+   
     header("Location: author.php?success=Xóa Thành Công!");
 }
 

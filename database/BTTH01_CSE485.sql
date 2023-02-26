@@ -75,14 +75,14 @@ CREATE TABLE `tacgia` (
 --
 
 INSERT INTO `tacgia` (`ma_tgia`, `ten_tgia`, `hinh_tgia`) VALUES
-(1, 'Nhacvietplus', NULL),
-(2, 'Sưu tầm', NULL),
-(3, 'Sandy', NULL),
-(4, 'Lê Trung Ngân', NULL),
-(5, 'Khánh Ngọc', NULL),
-(6, 'Night Stalker', NULL),
-(7, 'Phạm Phương Anh', NULL),
-(8, 'Tâm tình', NULL);
+(1, 'Nhacvietplus', 'images/authors/Nhacvietplus-21.jpg'),
+(2, 'Sưu tầm', 'images/authors/ca-si-phan-manh-quynh-21.jpg'),
+(3, 'Sandy', 'images/authors/Sandy_-_Meu_Canto_Tour_-3-.jpg'),
+(4, 'Lê Trung Ngân', 'images/authors/nsLeNgan1.jpg'),
+(5, 'Khánh Ngọc', 'images/authors/khanh-ngoc2-111.jpg'),
+(6, 'Night Stalker', 'images/authors/239873352_388572669293026_405401101...'),
+(7, 'Phạm Phương Anh', 'images/authors/phamphuonganh1.jpg'),
+(8, 'Tâm tình', 'images/authors/ca-si-phan-manh-quynh-22.jpg');
 
 -- --------------------------------------------------------
 
