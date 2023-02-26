@@ -1,5 +1,5 @@
 <?php
-    include('../auth.php');
+    require('../auth.php');
     require '..\include\datas_include\database_connection.php';
 ?>
 
@@ -33,15 +33,23 @@
                         <a class="nav-link" href="../index.php">Trang ngoài</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="category.php">Thể loại</a>
+                        <a class="nav-link" href="../admin/Category/category.php">Thể loại</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="author.php">Tác giả</a>
+                        <a class="nav-link" href="../admin/Author/author.php">Tác giả</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="article.php">Bài viết</a>
+                        <a class="nav-link" href="../admin/Article/article.php">Bài viết</a>
                     </li>
+                    
                 </ul>
+                </div>
+                <div>
+                <button type="button" class="btn btn-primary">
+                    <a class="nav-link" href="../logout.php">Đăng xuất</a>
+
+                </button>
+                    
                 </div>
             </div>
         </nav>
@@ -76,7 +84,7 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Thể loại</a>
+                            <a href="../admin/Category/category.php" class="text-decoration-none">Thể loại</a>
                         </h5>
 
                         <h5 class="h1 text-center">
@@ -97,7 +105,7 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Tác giả</a>
+                            <a href="../admin/Author/author.php" class="text-decoration-none">Tác giả</a>
                         </h5>
 
                         <h5 class="h1 text-center">
@@ -118,7 +126,7 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Bài viết</a>
+                            <a href="../admin/Article/article.php" class="text-decoration-none">Bài viết</a>
                         </h5>
 
                         <h5 class="h1 text-center">
@@ -136,9 +144,6 @@
             </div>
         </div>
     </main>
-    <footer class="bg-white d-flex justify-content-center align-items-center border-top border-secondary  border-2" style="height:80px">
-        <h4 class="text-center text-uppercase fw-bold">TLU's music garden</h4>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
-</html>
+    <?php
+     require '../include/footerAdmin_global.php';
+?>
