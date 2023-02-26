@@ -34,7 +34,7 @@
                                 <a href="edit_category.php?id=<?=$row['ma_tloai'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                             </td>
                             <td>
-                                <a onclick = "return confirm('Bạn có chắc chắn muốn xóa Thể Loại này?');"  href="delete_category.php?id=<?=$row['ma_tloai'] ?>" > <i class="fa-solid fa-trash"></i> </a>
+                                <a onclick = "return confirm('Bạn có chắc chắn muốn xóa thể loại <?=$row['ten_tloai'] ?>?');"  href="delete_category.php?id=<?=$row['ma_tloai'] ?>" > <i class="fa-solid fa-trash"></i> </a>
                             </td>
                         </tr>
 
