@@ -9,7 +9,7 @@
     //Thực thi câu lệnh
 
     if(mysqli_query($conn,$deleteCategorySql)){ //conn để kết nối csdl bên file ketnoi
-        header("Location: article.php");
+        header("Location: article.php?success=Xóa Thành Công!");
     }
  
 ?>

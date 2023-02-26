@@ -55,16 +55,16 @@
                         <form action="process_login.php" method = "post">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="txtUser"><i class="fas fa-user"></i></span>
-                                <input type="text" class="form-control" placeholder="username" name="txtUser">
+                                <input type="text" class="form-control" placeholder="username" name="txtUser" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>">
                             </div>
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="txtPass"><i class="fas fa-key"></i></span>
-                                <input type="text" class="form-control" placeholder="password" name="txtPassword">
+                                <input type="text" class="form-control" placeholder="password" name="txtPassword" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>">
                             </div>
                             
                             <div class="row align-items-center remember">
-                                <input type="checkbox">Remember Me
+                                <input type="checkbox" name="remember">Remember Me
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Login" class="btn float-end login_btn">

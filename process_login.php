@@ -28,7 +28,13 @@ if(isset($_POST['txtUser']))
         $_SESSION['user'] = $user;
         header('Location: admin/index.php');
     }
-
+    if(!empty($_POST["remember"])) {
+        setcookie ("username",$user,time()+ 3600);
+        setcookie ("password",$password,time()+ 3600);
+    } else {
+        setcookie("username","");
+        setcookie("password","");
+    }
 }
 
 

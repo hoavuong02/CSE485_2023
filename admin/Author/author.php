@@ -5,17 +5,6 @@
 
 
 <?php
-                if(isset($_GET['error'])){
-                ?>
-                    <div class="container mt-3">
-                        <div class="alert alert-danger alert-dismissible">
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            <strong>Error!</strong> <?= $_GET['error'] ?>
-                        </div>
-                    </div>
-<?php  }   ?>
-
-<?php
                 if(isset($_GET['success'])){
                 ?>
                 <div class="container mt-3">

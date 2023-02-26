@@ -66,7 +66,7 @@
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="" class="text-decoration-none">Người dùng</a>
+                            <a href="../admin/User/user.php" class="text-decoration-none">Người dùng</a>
                         </h5>
 
                         <h5 class="h1 text-center">
