@@ -48,7 +48,7 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">
-                <a href="add_category.php" class="btn btn-success">Thêm mới</a>
+                <a href="add_user.php" class="btn btn-success">Thêm mới</a>
                 <table class="table">
                     <thead>
                         <tr>
@@ -56,6 +56,7 @@
                             <th scope="col">Tên đăng nhập</th>
                             <th scope="col">Mật khẩu</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Là admin</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
@@ -67,6 +68,7 @@
                             <td><?= $row['ten_dnhap'] ?></td>
                             <td><?= $row['mat_khau'] ?></td>
                             <td><?= $row['email'] ?></td>
+                            <td><?= $row['admin'] ?></td>
                             <td>
                                 <a href="edit_user.php?id=<?=$row['ten_dnhap'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                             </td>

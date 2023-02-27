@@ -80,21 +80,22 @@ CALL sp_DSBaiViet('Nhạc trẻ');
 -- Đăng nhập/Quản trị trang web.
 
 
-CREATE TABLE `user` (
 
-  `ten_dnhap` varchar(30) PRIMARY KEY NOT NULL,
+CREATE TABLE `user` (
+  `ten_dnhap` varchar(30) NOT NULL,
   `mat_khau` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `ngay_dki` datetime NOT NULL DEFAULT current_timestamp()
+  `ngay_dki` datetime NOT NULL DEFAULT current_timestamp(),
+  `admin` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `user` (`ten_dnhap`, `mat_khau`, `email`, `ngay_dki`, `admin`) VALUES
+('buiductung', '456789', 'buidtung@gmail.com', '2023-02-23 12:52:48', 1),
+('damvuong', '123456', 'damvuong@gmail.com', '2023-02-23 12:52:48', 1),
+('nguyenmanhtien', '456789', 'nguyentien@gmail.com', '2023-02-23 12:52:48', 0);
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`ten_dnhap`, `mat_khau`, `email`, `ngay_dki`) VALUES
-('damvuong', '123456', 'damvuong@gmail.com', '2023-02-23 12:52:48'),
-('nguyenmanhtien', '456789', 'nguyentien@gmail.com', '2023-02-23 12:52:48');
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`ten_dnhap`);
+COMMIT;
 
 
 

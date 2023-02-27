@@ -21,6 +21,11 @@
                         <span class="input-group-text" id="lblUserEmail">Email</span>
                         <input type="email" class="form-control" name="txtUserEmail" >
                     </div>
+
+                    <div class="input-group mt-3 mb-3">
+                        <span class="input-group-text" id="lblUserEmail">Admin</span>
+                        <input type="text" class="form-control" name="txtUserAdmin" >
+                    </div>
             
                     <div class="form-group  float-end ">
                         <input type="submit" value="Thêm" class="btn btn-success">

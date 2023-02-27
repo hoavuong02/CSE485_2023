@@ -3,8 +3,18 @@
     if(!isset($_SESSION["user"])){
     header("Location: ../login.php");
     exit(); }
-    
     require '..\include\datas_include\database_connection.php';
+    $userName = $_SESSION['user'];
+    $sql = "SELECT admin FROM `user` WHERE ten_dnhap='$userName'";
+    $result = mysqli_query($conn, $sql);        
+    $isAdmin =0;
+    if(mysqli_num_rows($result) > 0){
+        $row = mysqli_fetch_assoc($result);
+        $isAdmin = $row['admin'];
+    }
+
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -59,14 +69,30 @@
         </nav>
 
     </header>
+    
+    
     <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
+        <?php
+            if($isAdmin !=1){  ?>
+                <div class="alert alert-warning">
+                    <strong>Cảnh báo!</strong> Chỉ có admin mới có thể truy cập vào mục <strong>Người dùng</strong>.
+                </div>
+        <?php    }
+        ?>
         <div class="row">
             <div class="col-sm-3">
                 <div class="card mb-2" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="../admin/User/user.php" class="text-decoration-none">Người dùng</a>
+                            <?php 
+                                if($isAdmin ==1){
+                                    echo "<a href='../admin/User/user.php' class='text-decoration-none'>Người dùng</a>";
+                                } else {
+                                    echo "<a href='#' class='text-decoration-none'>Người dùng</a>";
+                                }
+
+                            ?>
                         </h5>
 
                         <h5 class="h1 text-center">

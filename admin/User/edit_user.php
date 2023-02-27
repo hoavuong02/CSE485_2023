@@ -33,6 +33,11 @@
                         <input type="text" class="form-control filetg" name="txtEmail" value = "<?= $row['email'] ?>">
                     </div>
 
+                    <div class="input-group mt-3 mb-3">
+                        <span class="input-group-text" id="lblAuthName">Là admin</span>
+                        <input type="text" class="form-control filetg" name="txtAdmin" value = "<?= $row['admin'] ?>">
+                    </div>
+
                     <div class="form-group  float-end ">
                         <input type="submit" value="Lưu lại" class="btn btn-success">
                         <a href="author.php" class="btn btn-warning ">Quay lại</a>

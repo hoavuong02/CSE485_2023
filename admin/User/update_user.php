@@ -3,7 +3,8 @@
     $userName = $_POST['txtUserName'];
     $password = $_POST['txtPasword'];
     $email = $_POST['txtEmail'];
-    $updateUserSql = "UPDATE user SET mat_khau = '$password', email = '$email' WHERE ten_dnhap =  '$userName'";
+    $admin = $_POST['txtAdmin'];
+    $updateUserSql = "UPDATE user SET mat_khau = '$password', email = '$email', admin = '$admin' WHERE ten_dnhap =  '$userName'";
 
 //Thực thi câu lệnh
 
