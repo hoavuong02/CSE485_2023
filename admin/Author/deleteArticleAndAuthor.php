@@ -10,8 +10,9 @@ $deleteAuthorSql = "DELETE FROM tacgia WHERE ma_tgia = $getId";
 
 
 if (mysqli_query($conn, $deleteArticle) && mysqli_query($conn, $deleteAuthorSql )) {
-    echo "success";
-} else {
+    echo "succes";
+}   
+else {
     echo "fail";
 }
 

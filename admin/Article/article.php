@@ -50,10 +50,10 @@
                             <th>Xóa</th>
                         </tr>
                     </thead>
-                    <?php  while($row = mysqli_fetch_assoc($result)) { ?>
+                    <?php $index = 1;  while($row = mysqli_fetch_assoc($result)) { ?>
                     <tbody>
                         <tr>
-                            <th scope="row"><?= $row['ma_bviet'];  ?></th>
+                            <th scope="row"><?= $index++;  ?></th>
                             <td><?= $row['tieude'] ?></td>
                             <td><?= $row['ten_bhat'] ?></td>
                             <td><?= $row['ten_tloai'] ?></td>
@@ -62,7 +62,7 @@
                                 <a href="edit_article.php?id=<?=$row['ma_bviet'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                             </td>
                             <td>
-                                <a onclick = "return confirm('Bạn có chắc chắn muốn xóa Thể Loại này?');"  href="delete_article.php?id=<?=$row['ma_bviet'] ?>" > <i class="fa-solid fa-trash"></i> </a>
+                                <a onclick = "return confirm('Bạn có chắc chắn muốn xóa bài viết <?=  $row['tieude']  ?> này?');"  href="delete_article.php?id=<?=$row['ma_bviet'] ?>" > <i class="fa-solid fa-trash"></i> </a>
                             </td>
                         </tr>
 

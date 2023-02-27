@@ -3,7 +3,23 @@
 
 require_once '../../include/datas_include/database_connection.php';
 
+$upload_path   = '../../';
+
 $getId = $_GET['id']; //id hiện tại của author
+
+//phục vụ việc xóa ảnh trong folder
+$sqlgetlinkImg  = "SELECT hinh_tgia FROM tacgia WHERE ma_tgia = $getId "; 
+$resultlinkImg = mysqli_query($conn, $sqlgetlinkImg);
+$rowlinkImg = mysqli_fetch_assoc($resultlinkImg);
+
+$pathImg = $upload_path.$rowlinkImg['hinh_tgia'];
+
+
+
+// $rowlinkImg2 = mysqli_fetch_assoc($resultlinkImg2);
+// $pathImg2 = $upload_path.$rowlinkImg2['hinhanh'];
+
+//---------------------------------------------------
 
 $deleteCategorySql = "DELETE FROM tacgia WHERE ma_tgia = $getId";
 
@@ -36,7 +52,6 @@ if ($found) { //=true tìm thấy sự trùng lặp
                 if (this.readyState == 4 && this.status == 200) {
                     // chuyển hướng trang sau khi xóa thành công
                     window.location.href = 'author.php?success=Xóa Thành Công!';
-                   
                 }
             };
             xmlhttp.open('GET', 'deleteArticleAndAuthor.php?id=' + <?php echo $getId; ?>, true);
@@ -50,10 +65,12 @@ if ($found) { //=true tìm thấy sự trùng lặp
 
 <?php
     // header("Location: author.php?success=Xóa Thành Công!");
-
+   
 } else {
     mysqli_query($conn, $deleteCategorySql);
-   
+    if (file_exists($pathImg)) {                       // If image file exists
+        $unlink = unlink($pathImg);                    // Delete image file
+    }   
     header("Location: author.php?success=Xóa Thành Công!");
 }
 

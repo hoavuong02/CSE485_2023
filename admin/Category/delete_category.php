@@ -21,9 +21,6 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             break 2; // thoát khỏi cả hai vòng lặp while và foreach
         }
     }
-
-?>
-
 }
 
 if ($found) { //=true tìm thấy sự trùng lặp
