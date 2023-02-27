@@ -1,7 +1,16 @@
 <?php
     require 'include\header_global.php';
 ?>
-   
+   <style>
+        main.container.mt-5{
+            font-family: var(--fontfamily-primary) ;
+            font-size: 19px ;
+        }
+   </style>
+
+<?php
+    
+?>
     <main class="container mt-5" style="margin-top:200px!important" >
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <?php

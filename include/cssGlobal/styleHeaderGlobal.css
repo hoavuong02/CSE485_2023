@@ -117,6 +117,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh; /* Set height to 100% of viewport height */
+    
   }
 main{
     flex: 1; /*Để lúc nào footer cũng nằm phía dưới*/

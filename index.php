@@ -1,7 +1,26 @@
 <?php
     require 'include\header_global.php';
 ?>
+<style>
+    body{
+        background-color: var(--primary-color);
+    }
+    h3.text-center.text-uppercase.mb-3.text-primary{
+        color : #fff !important;
+    }
+    a.text-decoration-none.text-dark.rgba-red-strong {
+        font-family: var(--fontfamily-primary);
+        font-size: 18px;
+    }
+    a.text-decoration-none.text-dark.rgba-red-strong:hover {
+        color: red !important;
+        text-shadow: 0 2px 18px rgb(0 255 255 / 80%);
+    }
 
+</style>
+<?php
+    
+?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -36,7 +55,7 @@
                 require 'include\datas_include\database_connection.php';
                 if(isset($_GET['submit_search'])){       
                 ?>
-                <h3 style = "font-family : var(--fontfamily-primary) " text-center text-uppercase fw-bold>Kết quả tìm kiếm:</h3>
+                <h3 style = "font-family : var(--fontfamily-primary); color : #fff; " text-center text-uppercase fw-bold>Kết quả tìm kiếm:</h3>
                 <?php    
                     $infoSearch= $_GET['search'];
                     if(isset($_GET['search'])){

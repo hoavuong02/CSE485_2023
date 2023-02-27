@@ -28,6 +28,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style_login.css">
 </head>
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set height to 100% of viewport height */
+    
+  }
+    main{
+        flex: 1; /*Để lúc nào footer cũng nằm phía dưới*/
+    }
+
+</style>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 bg-white rounded">
